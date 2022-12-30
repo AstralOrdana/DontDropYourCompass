@@ -15,8 +15,8 @@ loom {
         convertAccessWideners = true
         extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
 
-        mixinConfig  "template_mod-common.mixins.json"
-        mixinConfig  "template_mod.mixins.json"
+        mixinConfig  "dont_drop_your_compass-common.mixins.json"
+        mixinConfig  "dont_drop_your_compass.mixins.json"
     }
 }
 
@@ -30,13 +30,11 @@ configurations {
 
 
 processResources {
-
     inputs.property "version", project.version
-    inputs.property "moonlight_version", rootProject.moonlight_version
     //inputs.property "mod_name": project.getArchivesBaseName()
 
     filesMatching("META-INF/mods.toml") {
-        expand "version": project.version, "moonlight_version": rootProject.moonlight_version
+        expand "version": project.version
         expand "mod_name": project.getArchivesBaseName()
     }
 }
@@ -155,7 +153,6 @@ dependencies {
 
     implementation 'org.jetbrains:annotations:22.0.0'
 
-    modImplementation("curse.maven:selene-499980:4040434")
     //modImplementation("net.mehvahdjukaar:moonlight-forge:${project.moonlight_version}")
     //modImplementation ("curse.maven:jei-238222:3884337")
     //modImplementation ("curse.maven:configured-457570:4011355")

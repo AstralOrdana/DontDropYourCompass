@@ -23,20 +23,10 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
 
-    //modImplementation("net.mehvahdjukaar:moonlight-fabric:${rootProject.moonlight_version}")
-    //modImplementation("net.mehvahdjukaar:moonlight-fabric:${rootProject.moonlight_version}")
-    modImplementation("curse.maven:selene-499980:4059670")
-
     //modImplementation(include("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_version}")) {
     //    exclude group: 'net.fabricmc.fabric-api'
     //}
-    modImplementation("curse.maven:yacl-667299:3987709")
 
-    // modCompileOnly("curse.maven:modmenu-308702:3920481")
-
-    modImplementation("curse.maven:modmenu-308702:3920481") {
-        exclude module: "fabric-api"
-    }
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
@@ -48,7 +38,7 @@ processResources {
     inputs.property "mod_id", rootProject.mod_id
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version, "mod_id": rootProject.mod_id, "moonlight_version": rootProject.moonlight_version
+        expand "version": project.version, "mod_id": rootProject.mod_id
     }
 }
 

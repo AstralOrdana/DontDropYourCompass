@@ -1,34 +1,30 @@
 {
   "schemaVersion": 1,
-  "id": "template_mod",
+  "id": "dont_drop_your_compass",
   "version": "${version}",
-  "name": "Template Mod",
-  "description": "Template Mod Description",
+  "name": "Dont Drop Your Compass",
+  "description": "Recall Compasses no longer drop upon death!",
   "authors": [
     "Ordana"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/template_mod",
-    "sources": "https://github.com/AstralOrdana/template_mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/dont_drop_your_compass",
+    "sources": "https://github.com/AstralOrdana/dont_drop_your_compass"
   },
   "license": "LGPLv3",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.ordana.template_mod.fabric.TemplateModFabric"
-    ],
-    "modmenu": [
-      "com.ordana.template_mod.integration.fabric.ModMenuCompat"
+      "com.ordana.dont_drop_your_compass.fabric.DontDropYourCompassFabric"
     ]
   },
   "mixins": [
-    "template_mod.mixins.json",
-    "template_mod-common.mixins.json"
+    "dont_drop_your_compass.mixins.json",
+    "dont_drop_your_compass-common.mixins.json"
   ],
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.19.2",
-    "moonlight": ">=1.19.2-2.0.35"
+    "minecraft": ">=1.19.2"
   }
 }

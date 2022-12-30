@@ -7,11 +7,11 @@ license="LGPLv3"
 
 [[mods]] #mandatory
 
-modId="template_mod" #mandatory
+modId="dont_drop_your_compass" #mandatory
 
 version = "${version}"
 
-displayName="Template Mod" #mandatory
+displayName="Dont Drop Your Compass" #mandatory
 
 logoFile="icon.png" #optional
 
@@ -19,12 +19,12 @@ credits="Ordana" #optional
 
 authors="Ordana" #optional
 
-itemIcon="template_mod:template" #catalogue icon
+itemIcon="dont_drop_your_compass:template" #catalogue icon
 description='''
-Template Mod Description
+Recall Compasses no longer drop upon death!
 '''
 
-[[dependencies.template_mod]] #optional
+[[dependencies.dont_drop_your_compass]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
 
@@ -35,18 +35,10 @@ Template Mod Description
     ordering="NONE"
     side="BOTH"
 # Here's another dependency
-[[dependencies.template_mod]]
+[[dependencies.dont_drop_your_compass]]
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
     versionRange="[1.19.2,1.20)"
     ordering="NONE"
-    side="BOTH"
-
-[[dependencies.template_mod]]
-
-    modId="moonlight"
-    mandatory=true
-    versionRange="[1.19.2-2.0.35,]"
-    ordering="AFTER"
     side="BOTH"

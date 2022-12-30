@@ -3,7 +3,7 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/template_mod.accesswidener")
+    accessWidenerPath = file("src/main/resources/dont_drop_your_compass.accesswidener")
 }
 
 dependencies {
@@ -13,7 +13,7 @@ dependencies {
 
     //implementation fileTree(dir: 'mods', include: '*.jar')
 
-    modImplementation("net.mehvahdjukaar:moonlight:${project.moonlight_version}")
+    //modImplementation("net.mehvahdjukaar:moonlight:${project.moonlight_version}")
     //modImplementation("curse.maven:selene-499980:3859470")
 }
 
